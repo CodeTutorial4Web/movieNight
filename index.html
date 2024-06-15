@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Movie Night</title>
+</head>
+<body>
+
+    <button id="scrollUpBtn"><i class="fas fa-arrow-up"></i></button>
+
+
+    <!-- NAVBAR -->
+    <header class="show">
+        <nav>
+            <a href="#" class="logo">Movie <span>Night</span></a>
+            
+            
+            <ul>
+                <ul>
+                    <li><a href="#popular">Popular</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#tvShows">TV Show</a></li>
+                </ul>
+
+
+                
+            <div class="btns-container">
+                <a href="#subscribe" class="btn">Subdcribe</a>
+                <span class="dot"></span>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+            </ul>
+
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <!-- HOME SECTION -->
+
+    <section id="home">
+ <!-- Swiper -->
+ <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">Please Wait...</div>
+        <div class="swiper-slide">Please Wait...</div>
+        <div class="swiper-slide">Please Wait...</div>
+        <div class="swiper-slide">Please Wait...</div>
+        <div class="swiper-slide">Please Wait...</div>
+        <div class="swiper-slide">Please Wait...</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+    </section>
+    <!-- Popular SECTION -->
+    <section id="popular">
+        <h3 class="heading">POPULAR</h3>
+        <div class="porular-movies-container">
+            Please Wait...
+        </div>
+
+    </section>
+    <!-- MOVIES SECION -->
+    <section id="movies">
+        <div class="search__container">
+            <h3 class="heading">MOVIES</h3>
+            <div class="search-container">
+                <input type="text" name="search" id="searchMovies" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="movies-container">
+         
+            Please Wait...
+        </div>
+
+        <div class="pages">
+            <span data-index="1" class="page">1</span>
+            <span data-index="2" class="page">2</span>
+            <span data-index="3" class="page">3</span>
+            <span data-index="4" class="page">4</span>          
+        </div>
+    </section>
+    <!-- TV SHOWS -->
+    <section id="tvShows">
+        <div class="search__container">
+            <h3 class="heading">TV SHOWS</h3>
+            <div class="search-container">
+                <input type="text" name="search" id="searchTv" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="tv-shows-container">
+            Please Wait...
+        </div>
+
+        <div class="pages">
+            <span data-index="1" class="page">1</span>
+            <span data-index="2" class="page">2</span>
+            <span data-index="3" class="page">3</span>
+            <span data-index="4" class="page">4</span>          
+        </div>
+    </section>
+
+    <section id="newsLetter">
+        <h3 class="heading">NEWSLETTER</h3>
+        <form id="form">
+            <input type="text" placeholder="Enter your email" id="email">
+            <button id="subscribe">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="row">
+            <a href="#" class="logo">Movie <span>Night</span></a>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div>
+            &copy;Copyright 2024 MovieNight | All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper", {
+            rewind: true,
+            autoplay: {
+            delay: 12000,
+            disableOnInteraction: false,
+        },
+        direction: 'horizontal',
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/servers/tv-shows-section.js"></script>
+    <script src="js/servers/movies-section.js"></script>
+    <script src="js/servers/porular-section.js"></script>
+    <script src="js/servers/home-section.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
